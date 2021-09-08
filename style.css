@@ -1,0 +1,59 @@
+:root{
+    --border-color:#e3e5e4;
+    --background-color:#e3e7ea;
+    --text-color:#34444f
+}
+
+*{
+    box-sizing: border-box;
+}
+body{
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    margin: 0;
+
+}
+.draggable-list{
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    padding: 0;
+    list-style: none
+}
+.draggable-list li{
+    display: flex;
+    flex: 1;
+    background-color: red;
+    color: white;
+
+}
+
+.draggable-list li.over .draggable{
+    background: #eaeaea;
+}
+
+.draggable-list li:not(:last-of-type){
+    border-bottom: 1px solid var(--border-color);
+}
+.draggable-list .number{
+    background-color: var(--background-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    height: 60px;
+    width: 60px;
+}
+.draggable-list .person-name{
+    margin: 0 20px 0 0;
+}
+.draggable{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    flex: 1;
+    padding: 10px;
+}
